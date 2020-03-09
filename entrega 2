@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Logica para ciencias de la computación: entrega 2}
+\author{Andrés Cuervo y Sebastían Suárez García }
+\date{Marzo 2020}
+
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Letras proposicionales}
+
+
+\begin{table}[!h]
+\begin{center}
+\resizebox{4cm}{!} {
+\begin{tabular}{| r | l | c |}
+
+\hline
+a & b & c \\ \hline
+d & e & f \\ \hline
+g & h & i \\ \hline
+\end{tabular}
+}
+\caption{Letras proposicionales X}
+\label{tab:X}
+\end{center}
+\end{table} 
+
+\begin{table}[!h]
+\begin{center}
+\resizebox{4cm}{!} {
+\begin{tabular}{| r | l | c |}
+\hline
+j & k & l \\ \hline
+m & n & o \\ \hline
+p & q & r \\ \hline
+\end{tabular}
+}
+\caption{Letras proposicionales O}
+\label{tab:O}
+\end{center}
+\end{table} 
+
+\section{Reglas}
+\begin{itemize} 
+\item X y O no pueden estar en la misma posición. 
+
+\item Para ganar, el mismo simbolo debe estar en tres espacios en linea, ya sea horizontal, vertical o diagonalmente. 
+
+\item Se tomará como condicion inicial que X inicie en una de las esquinas del tablero.
+
+\item Si X está en dos casillas adyacentes, se pone otra X en la posicion correcta para formar la linea de tres
+\item Si no hay opcion de formar la linea de tres de X y hay una casilla para formar la linea de tres de O, en esa casilla se coloca X 
+
+\end{itemize}
+
+
+\section{Reglas en lenguaje logico}
+\begin{itemize} 
+\item (a \Leftrightarrow \neg j) \land (\neg a \Leftrightarrow j) \land(b \Leftrightarrow \neg k) \land (\neg b \Leftrightarrow k)\land (c \Leftrightarrow \neg l) \land (\neg c \Leftrightarrow l)\land (d \Leftrightarrow \neg m) \land (\neg d \Leftrightarrow m)\land (e \Leftrightarrow \neg n) \land (\neg e \Leftrightarrow n)\land (f \Leftrightarrow \neg o) \land (\neg f \Leftrightarrow o)\land (g \Leftrightarrow \neg p) \land (\neg g \Leftrightarrow p)\land (h \Leftrightarrow \neg q) \land (\neg h \Leftrightarrow q) \land (i \Leftrightarrow \neg r) \land (\neg i \Leftrightarrow r).
+\end{itemize}
+
+\item Caso en el que gana X:
+\begin{itemize} \item(a \land d \land g) \lor (b \land e \land h) \lor (c \land f \land i) \lor (a \land b \land c) \lor (d \land e \land f) \lor (g \land h \land i) \lor (a \land e \land i) \lor (c \land g \land e).\end{itemize} 
+
+\item Caso en el que gana O:
+\begin{itemize} \item(j \land k \land l) \lor (m \land n \land \lor) \lor (p \land q \land r) \lor (j \land m \land p) \lor (k \land n \land q) \lor (l \land \lor \land r) \lor (j \land n \land r) \lor (l \land n \land p).\end{itemize}
+
+\item Condición inicial:
+\begin{itemize}
+
+\item (a \lor c \lor i \lor g).
+\end{itemize}
+
+\item X en casiilas adyasentes:
+\begin{itemize}
+
+\item (a \land b \Rightarrow c) \lor (a \land d \Rightarrow g) \lor (a \land e \Rightarrow i) \lor (b \land c\Rightarrow a) \lor (b \land e \Rightarrow h) \lor (c \land f \Rightarrow i) \lor (c \land e \Rightarrow g) \lor (d \land g \Rightarrow a) \lor (d \land e \Rightarrow f) \lor (e \land f \Rightarrow d) \lor (e \land i \Rightarrow a) \lor (e \land h \Rightarrow b) \lor (e \land g \Rightarrow c) \lor (f \land i \Rightarrow c) \lor (g \land h \Rightarrow i) \lor (h \land i \Rightarrow g) .
+\end{itemize}
+
+\item O en casiilas adyasentes:
+\begin{itemize}
+
+\item \neg[(a \land b) \lor (a \land d) \lor (a \land c) \lor (b \land c) \lor (b \land e) \lor (c \land f) \lor (c \land e) \lor (d \land g) \lor (d \land e) \lor (e \land f) \lor (e \land i) \lor (e \land h) \lor (e \land g) \lor (f \land i) \lor (g \land h) \lor (h \land i) ]
+\end{itemize}
+
+
+\end{document}
