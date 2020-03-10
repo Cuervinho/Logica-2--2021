@@ -78,16 +78,35 @@ p & q & r \\ \hline
 \item (a \lor c \lor i \lor g).
 \end{itemize}
 
-\item X en casiilas adyasentes:
+\item X en casiilas adyascentes:
 \begin{itemize}
 
 \item (a \land b \Rightarrow c) \lor (a \land d \Rightarrow g) \lor (a \land e \Rightarrow i) \lor (b \land c\Rightarrow a) \lor (b \land e \Rightarrow h) \lor (c \land f \Rightarrow i) \lor (c \land e \Rightarrow g) \lor (d \land g \Rightarrow a) \lor (d \land e \Rightarrow f) \lor (e \land f \Rightarrow d) \lor (e \land i \Rightarrow a) \lor (e \land h \Rightarrow b) \lor (e \land g \Rightarrow c) \lor (f \land i \Rightarrow c) \lor (g \land h \Rightarrow i) \lor (h \land i \Rightarrow g) .
 \end{itemize}
 
-\item O en casiilas adyasentes:
+\item O en casiilas adyacentes:
 \begin{itemize}
 
-\item \neg[(a \land b) \lor (a \land d) \lor (a \land c) \lor (b \land c) \lor (b \land e) \lor (c \land f) \lor (c \land e) \lor (d \land g) \lor (d \land e) \lor (e \land f) \lor (e \land i) \lor (e \land h) \lor (e \land g) \lor (f \land i) \lor (g \land h) \lor (h \land i) ]
+\item \neg[(a \land b) \lor (a \land d) \lor (a \land c) \lor (b \land c) \lor (b \land e) \lor (c \land f) \lor (c \land e) \lor (d \land g) \lor (d \land e) \lor (e \land f) \lor (e \land i) \lor (e \land h) \lor (e \land g) \lor (f \land i) \lor (g \landh) \lor (h \land i) ]
+\land...\\
+\item 
+(j \land m \Rightarrow g)\\
+(j \land k \Rightarrow c) \\
+(j\land n \Rightarrow i)\\
+(k \land l \Rightarrow a)\\
+(k \land n \Rightarrow h)\\
+(l\land n \Rightarrow g)\\
+(l \land o \Rightarrow i)\\
+(m\land p \Rightarrow a)\\
+(m\land n \Rightarrow f)\\
+(n\land o \Rightarrow d)\\
+(n\land q \Rightarrow b)\\
+(n\land p \Rightarrow c) \\
+(n\land r \Rightarrow a)\\
+(o\land r \Rightarrow c) \\
+(p\land q\Rightarrow i)\\
+(q\land r \Rightarrow g)\\
+
 \end{itemize}
 
 
